@@ -101,7 +101,7 @@ extension CurrentPlaceViewController: CLLocationManagerDelegate {
 						case .denied, .restricted:
 								state = .error(.locationDenied)
 						case .notDetermined:
-								state = .loading
+								reloadData()
 						@unknown default:
 								state = .error(.unknownError)
 				}
