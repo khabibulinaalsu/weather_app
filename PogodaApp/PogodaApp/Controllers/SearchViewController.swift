@@ -34,15 +34,16 @@ final class SearchViewController: StatableViewController {
 		private func stateDidChange() {
 				presentedView.removeFromSuperview()
 				if let state = state {
+						let newFrame = view.safeAreaLayoutGuide.layoutFrame
+								.inset(by: UIEdgeInsets(top: searchField.intrinsicContentSize.height + 20.0, left: 0, bottom: 0, right: 0))
 						switch state {
 								case .success(let model):
-										let newFrame = view.safeAreaLayoutGuide.layoutFrame
-												.inset(by: UIEdgeInsets(top: searchField.intrinsicContentSize.height + 20.0, left: 0, bottom: 0, right: 0))
 										presentedView = WeatherTableView(frame: newFrame, model: model)
 								case .loading:
-										presentedView = LoadingView(frame: view.frame)
-								case .error(_):
-										presentedView = ErrorView(frame: view.frame) { [weak self] in
+										presentedView = LoadingView(frame: newFrame)
+								case .error(let error):
+										print("\(error)")
+										presentedView = ErrorView(frame: newFrame, error: error) { [weak self] in
 												self?.reloadData()
 										}
 						}
@@ -59,13 +60,14 @@ final class SearchViewController: StatableViewController {
 		private func findPlace(_ name: String) {
 				state = .loading
 				let geocoder = CLGeocoder()
+				var location = CLLocation()
 				geocoder.geocodeAddressString(name) { [weak self] (placemarks, error) in
 						if let placemark = placemarks?.first {
-								let location = placemark.location ?? CLLocation()
+								location = placemark.location ?? CLLocation()
 								self?.setLocation(location)
 						} else {
-								if let error {
-										self?.state = .error(error)
+								if error != nil {
+										self?.state = .error(.geocoderError)
 								}
 						}
 				}
@@ -77,6 +79,16 @@ final class SearchViewController: StatableViewController {
 						latitude: location.coordinate.latitude,
 						longitude: location.coordinate.longitude
 				)
+				let geocoder = CLGeocoder()
+				geocoder.reverseGeocodeLocation(location) { [weak self] (placemarks, error) in
+						if let placemark = placemarks?.first {
+								self?.title = placemark.locality ?? placemark.subLocality ?? placemark.administrativeArea ?? placemark.subAdministrativeArea ?? "Unknown place"
+						} else {
+								if error != nil {
+										self?.state = .error(.geocoderError)
+								}
+						}
+				}
 		}
 		
 		private func configureTextField() {
@@ -116,5 +128,6 @@ final class SearchViewController: StatableViewController {
 				searchField.text = nil
 				stack.removeArrangedSubview(cancelButton)
 				cancelButton.removeFromSuperview()
+				title = "В другом городе"
 		}
 }

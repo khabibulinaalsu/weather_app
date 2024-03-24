@@ -1,11 +1,22 @@
 import UIKit
 
 
+public enum ClientError: Error {
+		case urlError
+		case getRequestError
+		case decodeJsonError
+		case locationDenied
+		case locationError
+		case geocoderError
+		case unknownError
+}
+
+
 final class ErrorView: UIView {
 
 		private let label: UILabel = {
 				let label: UILabel = UILabel()
-				label.text = "Error occurred\nPlease, try again"
+				label.text = "Возникла ошибка\nПожалуйста, повторите попытку"
 				return label
 		}()
 		private let button: UIButton = {
@@ -16,9 +27,12 @@ final class ErrorView: UIView {
 		}()
 		private let tryAgain: () -> Void
 		
-		init(frame: CGRect, tryAgain: @escaping () -> Void) {
+		init(frame: CGRect, error: ClientError, tryAgain: @escaping () -> Void) {
 				self.tryAgain = tryAgain
 				super.init(frame: frame)
+				if error == ClientError.locationDenied {
+						label.text = "Доступ к вашей геолокации запрещен\nПожалуйста, разрешите доступ к службам геолокации\nи повторите попытку"
+				}
 				configureUI()
 		}
 		

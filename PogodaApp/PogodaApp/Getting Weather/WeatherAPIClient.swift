@@ -1,18 +1,11 @@
 import Foundation
 
 
-public enum ClientError: Error {
-		case urlError
-		case getRequestError
-		case decodeJsonError
-}
-
-
 public protocol WeatherProvider {
 		func weatherDailyList(
 				lat: Double,
 				lon: Double,
-				completion: @escaping (Result<WeatherGetModel, Error>) -> Void
+				completion: @escaping (Result<WeatherGetModel, ClientError>) -> Void
 		)
 }
 
@@ -31,7 +24,7 @@ final class WeatherAPIClient: WeatherProvider {
 		func weatherDailyList(
 				lat: Double,
 				lon: Double,
-				completion: @escaping (Result<WeatherGetModel, Error>) -> Void) {
+				completion: @escaping (Result<WeatherGetModel, ClientError>) -> Void) {
 						let url = URL(string: Constants.UrlDefault + "lat=\(lat)&lon=\(lon)&exclude=minutely,hourly,alerts&appid=\(Constants.APIkey)&units=\(units)&lang=ru")
 						guard let url else {
 								DispatchQueue.main.async {

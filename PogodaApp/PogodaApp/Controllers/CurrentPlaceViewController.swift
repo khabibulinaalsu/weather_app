@@ -24,6 +24,7 @@ final class CurrentPlaceViewController: StatableViewController {
 		
 		override func viewDidLoad() {
 				super.viewDidLoad()
+				view.backgroundColor = .systemBackground
 				state = .loading
 				getLocation()
 		}
@@ -36,8 +37,8 @@ final class CurrentPlaceViewController: StatableViewController {
 										presentedView = WeatherTableView(frame: view.frame, model: model)
 								case .loading:
 										presentedView = LoadingView(frame: view.frame)
-								case .error(_):
-										presentedView = ErrorView(frame: view.frame) { [weak self] in
+								case .error(let error):
+										presentedView = ErrorView(frame: view.frame, error: error) { [weak self] in
 												self?.reloadData()
 										}
 						}
@@ -53,7 +54,6 @@ final class CurrentPlaceViewController: StatableViewController {
 		private func getLocation() {
 				locationManager.delegate = self
 				locationManager.requestLocation()
-				locationManager.startUpdatingLocation()
 		}
 		
 		private func setLocation(_ location: CLLocation) {
@@ -68,11 +68,10 @@ final class CurrentPlaceViewController: StatableViewController {
 						if let placemark = placemarks?.first {
 								self?.title = placemark.locality ?? placemark.subLocality ?? placemark.administrativeArea ?? placemark.subAdministrativeArea ?? "Unknown place"
 						} else {
-								if let error {
-										self?.state = .error(error)
+								if error != nil {
+										self?.state = .error(.geocoderError)
 								}
 						}
-						
 				}
 		}
 		
@@ -92,11 +91,19 @@ extension CurrentPlaceViewController: CLLocationManagerDelegate {
 				
 				let userlocation = locations[0] as CLLocation
 				setLocation(locationManager.location ?? userlocation)
-				locationManager.stopUpdatingLocation()
 				
 		}
 		
 		func locationManager(_ manager: CLLocationManager, didFailWithError error: Swift.Error) {
-				state = .error(error)
+				switch manager.authorizationStatus {
+						case .authorizedAlways, .authorizedWhenInUse:
+								state = .error(.locationError)
+						case .denied, .restricted:
+								state = .error(.locationDenied)
+						case .notDetermined:
+								state = .loading
+						@unknown default:
+								state = .error(.unknownError)
+				}
 		}
 }

@@ -5,7 +5,7 @@ import UIKit
 public enum State {
 		case success(WeatherGetModel)
 		case loading
-		case error(Error)
+		case error(ClientError)
 }
 
 

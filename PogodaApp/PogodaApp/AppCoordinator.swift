@@ -22,12 +22,12 @@ final class AppCoordinator {
 				tabBarController.setViewControllers([mainNC, searchNC], animated: true)
 				
 				mainNC.tabBarItem = UITabBarItem(
-						title: "Current Place",
+						title: "Текущее место",
 						image: UIImage(systemName: "location"),
 						selectedImage: UIImage(systemName: "location.fill")
 				)
 				searchNC.tabBarItem = UITabBarItem(
-						title: "Other Place",
+						title: "В другом городе",
 						image: UIImage(systemName: "globe.europe.africa"),
 						selectedImage: UIImage(systemName: "globe.europe.africa.fill")
 				)
