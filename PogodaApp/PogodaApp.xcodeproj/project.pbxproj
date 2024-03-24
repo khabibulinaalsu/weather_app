@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD9A84D42BAA2755009F1DC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A84D32BAA2755009F1DC1 /* AppDelegate.swift */; };
+		FD9A84D62BAA2755009F1DC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A84D52BAA2755009F1DC1 /* SceneDelegate.swift */; };
+		FD9A84D82BAA2755009F1DC1 /* CurrentPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A84D72BAA2755009F1DC1 /* CurrentPlaceViewController.swift */; };
+		FD9A84DD2BAA275C009F1DC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD9A84DC2BAA275C009F1DC1 /* Assets.xcassets */; };
+		FD9A84E02BAA275C009F1DC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD9A84DE2BAA275C009F1DC1 /* LaunchScreen.storyboard */; };
+		FD9A84E82BAA3EBD009F1DC1 /* WeatherAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A84E72BAA3EBD009F1DC1 /* WeatherAPIClient.swift */; };
+		FD9A84EA2BAA3FC5009F1DC1 /* TodayCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A84E92BAA3FC5009F1DC1 /* TodayCard.swift */; };
+		FD9A84EC2BAA403F009F1DC1 /* DailyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A84EB2BAA403F009F1DC1 /* DailyCard.swift */; };
+		FD9A84EE2BAA4D2C009F1DC1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A84ED2BAA4D2C009F1DC1 /* AppCoordinator.swift */; };
+		FD9A84F02BAA593D009F1DC1 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A84EF2BAA593D009F1DC1 /* Models.swift */; };
+		FD9A84F22BAB1591009F1DC1 /* AnyDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A84F12BAB1591009F1DC1 /* AnyDecodable.swift */; };
+		FD9A84F42BAB16B4009F1DC1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A84F32BAB16B4009F1DC1 /* SearchViewController.swift */; };
+		FD9A84F62BAB47F0009F1DC1 /* WeatherDailyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A84F52BAB47F0009F1DC1 /* WeatherDailyModel.swift */; };
+		FD9A84FA2BAB9D56009F1DC1 /* WeatherTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A84F92BAB9D56009F1DC1 /* WeatherTableView.swift */; };
+		FD9A84FC2BABA402009F1DC1 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A84FB2BABA402009F1DC1 /* LoadingView.swift */; };
+		FD9A84FE2BABAAF8009F1DC1 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A84FD2BABAAF8009F1DC1 /* ErrorView.swift */; };
+		FD9CDBDE2BAFB2F10050D412 /* UsefulInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9CDBDD2BAFB2F10050D412 /* UsefulInfoView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FD9A84D02BAA2755009F1DC1 /* PogodaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PogodaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD9A84D32BAA2755009F1DC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FD9A84D52BAA2755009F1DC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FD9A84D72BAA2755009F1DC1 /* CurrentPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPlaceViewController.swift; sourceTree = "<group>"; };
+		FD9A84DC2BAA275C009F1DC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD9A84DF2BAA275C009F1DC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FD9A84E12BAA275C009F1DC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD9A84E72BAA3EBD009F1DC1 /* WeatherAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPIClient.swift; sourceTree = "<group>"; };
+		FD9A84E92BAA3FC5009F1DC1 /* TodayCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCard.swift; sourceTree = "<group>"; };
+		FD9A84EB2BAA403F009F1DC1 /* DailyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCard.swift; sourceTree = "<group>"; };
+		FD9A84ED2BAA4D2C009F1DC1 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		FD9A84EF2BAA593D009F1DC1 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		FD9A84F12BAB1591009F1DC1 /* AnyDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyDecodable.swift; sourceTree = "<group>"; };
+		FD9A84F32BAB16B4009F1DC1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FD9A84F52BAB47F0009F1DC1 /* WeatherDailyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDailyModel.swift; sourceTree = "<group>"; };
+		FD9A84F92BAB9D56009F1DC1 /* WeatherTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableView.swift; sourceTree = "<group>"; };
+		FD9A84FB2BABA402009F1DC1 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		FD9A84FD2BABAAF8009F1DC1 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		FD9CDBDD2BAFB2F10050D412 /* UsefulInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulInfoView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD9A84CD2BAA2755009F1DC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD9A84C72BAA2755009F1DC1 = {
+			isa = PBXGroup;
+			children = (
+				FD9A84D22BAA2755009F1DC1 /* PogodaApp */,
+				FD9A84D12BAA2755009F1DC1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD9A84D12BAA2755009F1DC1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD9A84D02BAA2755009F1DC1 /* PogodaApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD9A84D22BAA2755009F1DC1 /* PogodaApp */ = {
+			isa = PBXGroup;
+			children = (
+				FD9A84D32BAA2755009F1DC1 /* AppDelegate.swift */,
+				FD9A84D52BAA2755009F1DC1 /* SceneDelegate.swift */,
+				FD9A84ED2BAA4D2C009F1DC1 /* AppCoordinator.swift */,
+				FD9CDBDF2BB0594D0050D412 /* Controllers */,
+				FD9CDBE12BB059CA0050D412 /* Weather Table View */,
+				FD9CDBE02BB059A90050D412 /* Additional Views */,
+				FD9CDBE22BB05A1A0050D412 /* Getting Weather */,
+				FD9CDBE32BB05A4B0050D412 /* Models */,
+				FD9A84DC2BAA275C009F1DC1 /* Assets.xcassets */,
+				FD9A84DE2BAA275C009F1DC1 /* LaunchScreen.storyboard */,
+				FD9A84E12BAA275C009F1DC1 /* Info.plist */,
+			);
+			path = PogodaApp;
+			sourceTree = "<group>";
+		};
+		FD9CDBDF2BB0594D0050D412 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FD9A84D72BAA2755009F1DC1 /* CurrentPlaceViewController.swift */,
+				FD9A84F32BAB16B4009F1DC1 /* SearchViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FD9CDBE02BB059A90050D412 /* Additional Views */ = {
+			isa = PBXGroup;
+			children = (
+				FD9A84FD2BABAAF8009F1DC1 /* ErrorView.swift */,
+				FD9A84FB2BABA402009F1DC1 /* LoadingView.swift */,
+			);
+			path = "Additional Views";
+			sourceTree = "<group>";
+		};
+		FD9CDBE12BB059CA0050D412 /* Weather Table View */ = {
+			isa = PBXGroup;
+			children = (
+				FD9A84F92BAB9D56009F1DC1 /* WeatherTableView.swift */,
+				FD9A84E92BAA3FC5009F1DC1 /* TodayCard.swift */,
+				FD9A84EB2BAA403F009F1DC1 /* DailyCard.swift */,
+				FD9CDBDD2BAFB2F10050D412 /* UsefulInfoView.swift */,
+			);
+			path = "Weather Table View";
+			sourceTree = "<group>";
+		};
+		FD9CDBE22BB05A1A0050D412 /* Getting Weather */ = {
+			isa = PBXGroup;
+			children = (
+				FD9A84E72BAA3EBD009F1DC1 /* WeatherAPIClient.swift */,
+				FD9A84F52BAB47F0009F1DC1 /* WeatherDailyModel.swift */,
+			);
+			path = "Getting Weather";
+			sourceTree = "<group>";
+		};
+		FD9CDBE32BB05A4B0050D412 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FD9A84EF2BAA593D009F1DC1 /* Models.swift */,
+				FD9A84F12BAB1591009F1DC1 /* AnyDecodable.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD9A84CF2BAA2755009F1DC1 /* PogodaApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD9A84E42BAA275C009F1DC1 /* Build configuration list for PBXNativeTarget "PogodaApp" */;
+			buildPhases = (
+				FD9A84CC2BAA2755009F1DC1 /* Sources */,
+				FD9A84CD2BAA2755009F1DC1 /* Frameworks */,
+				FD9A84CE2BAA2755009F1DC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PogodaApp;
+			productName = PogodaApp;
+			productReference = FD9A84D02BAA2755009F1DC1 /* PogodaApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD9A84C82BAA2755009F1DC1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					FD9A84CF2BAA2755009F1DC1 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = FD9A84CB2BAA2755009F1DC1 /* Build configuration list for PBXProject "PogodaApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FD9A84C72BAA2755009F1DC1;
+			productRefGroup = FD9A84D12BAA2755009F1DC1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD9A84CF2BAA2755009F1DC1 /* PogodaApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD9A84CE2BAA2755009F1DC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD9A84E02BAA275C009F1DC1 /* LaunchScreen.storyboard in Resources */,
+				FD9A84DD2BAA275C009F1DC1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD9A84CC2BAA2755009F1DC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD9A84F42BAB16B4009F1DC1 /* SearchViewController.swift in Sources */,
+				FD9A84F62BAB47F0009F1DC1 /* WeatherDailyModel.swift in Sources */,
+				FD9A84F22BAB1591009F1DC1 /* AnyDecodable.swift in Sources */,
+				FD9A84D82BAA2755009F1DC1 /* CurrentPlaceViewController.swift in Sources */,
+				FD9A84FA2BAB9D56009F1DC1 /* WeatherTableView.swift in Sources */,
+				FD9A84FC2BABA402009F1DC1 /* LoadingView.swift in Sources */,
+				FD9A84D42BAA2755009F1DC1 /* AppDelegate.swift in Sources */,
+				FD9A84EA2BAA3FC5009F1DC1 /* TodayCard.swift in Sources */,
+				FD9A84F02BAA593D009F1DC1 /* Models.swift in Sources */,
+				FD9A84EC2BAA403F009F1DC1 /* DailyCard.swift in Sources */,
+				FD9CDBDE2BAFB2F10050D412 /* UsefulInfoView.swift in Sources */,
+				FD9A84FE2BABAAF8009F1DC1 /* ErrorView.swift in Sources */,
+				FD9A84D62BAA2755009F1DC1 /* SceneDelegate.swift in Sources */,
+				FD9A84E82BAA3EBD009F1DC1 /* WeatherAPIClient.swift in Sources */,
+				FD9A84EE2BAA4D2C009F1DC1 /* AppCoordinator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FD9A84DE2BAA275C009F1DC1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD9A84DF2BAA275C009F1DC1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FD9A84E22BAA275C009F1DC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FD9A84E32BAA275C009F1DC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD9A84E52BAA275C009F1DC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PogodaApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Khabibulina.PogodaApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD9A84E62BAA275C009F1DC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PogodaApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Khabibulina.PogodaApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD9A84CB2BAA2755009F1DC1 /* Build configuration list for PBXProject "PogodaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD9A84E22BAA275C009F1DC1 /* Debug */,
+				FD9A84E32BAA275C009F1DC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD9A84E42BAA275C009F1DC1 /* Build configuration list for PBXNativeTarget "PogodaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD9A84E52BAA275C009F1DC1 /* Debug */,
+				FD9A84E62BAA275C009F1DC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FD9A84C82BAA2755009F1DC1 /* Project object */;
+}
